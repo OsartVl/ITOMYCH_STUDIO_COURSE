@@ -1,6 +1,3 @@
-import '../styles/main.css';
-
-
 console.log(`Варіант 1`);
 
 let Multiples3 = [];
@@ -26,10 +23,17 @@ for (let i = 1; i <= 100; i++) {
         Multiples15.push(i);
     }
 }
-console.log("Числа кратні 5", Multiples15);
+console.log("Числа кратні 15", Multiples15);
 
+let Multiples3_5_15 = [];
+for (let i = 1; i <= 100; i++) {
+    if (i % 3 == 0 || i % 5 == 0 || i % 15 == 0) {
+        Multiples3_5_15.push(i);
+    }
+}
+console.log("Числа кратні 3, 5, 15", Multiples3_5_15);
 
-// 2 Варіант
+// ! 2 Варіант
 
 function Multiples(items, multiples) {
     let array = [];
@@ -46,4 +50,3 @@ console.log(`Варіант 2`);
 Multiples(100, 3);
 Multiples(100, 5);
 Multiples(100, 15);
-
