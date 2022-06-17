@@ -42,7 +42,7 @@ function Multiples(items, multiples) {
             array.push(i);
         }
     }
-    console.log(`Числа кратні`, String(multiples), array)
+    console.log(`Числа кратні`, String(multiples), array);
 }
 
 console.log(`Варіант 2`);
@@ -50,3 +50,26 @@ console.log(`Варіант 2`);
 Multiples(100, 3);
 Multiples(100, 5);
 Multiples(100, 15);
+
+// ! 3 Варіант
+
+console.log(`Варіант 3`);
+
+let Mult3 = [],
+    Mult5 = [],
+    Mult15= [];
+for (let i = 1; i <= 100; i++) {
+    if (i % 3 == 0 ) {
+        Mult3.push(i)
+        
+    }
+    if (i % 5 == 0) {
+        Mult5.push(i)
+    }
+    if (i % 15 == 0) {
+        Mult15.push(i)
+    }
+}
+console.log("Числа кратні 3", Mult3);
+console.log("Числа кратні 5", Mult5);
+console.log("Числа кратні 15", Mult15);
