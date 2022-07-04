@@ -1,8 +1,6 @@
 
 function myFunction(a, b) {
-    if (a === b && a == b) {
-        return true;
-    }
+    return a === b
 }
 
 myFunction(2, 3); // Expected false
