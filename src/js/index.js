@@ -1,22 +1,29 @@
+// ***Homework**
 
+// Напишите функция, которая принимает в качестве аргументов 2 объекта и проверяет, является ли первый аргумент прототипом второго
 
-function myFunction(obj) { 
-    let newObj = {
-        firstName: obj.fn, lastName: obj.ln
-    };
-    if (obj.size) {
-        newObj.size = obj.size + "cm"
-    }
-    if (obj.weight) {
-        newObj.weight = obj.weight + "kg"
-    }
-    return newObj
+const obj1 = {
+
+a: 2
+
 }
-    myFunction({fn: 'Lisa', ln: 'Müller', age: 17, size: 175, weight: 67})
-    // Expected {fn: 'Lisa', ln: 'Müller', size: '175cm', weight: '67kg'}
-    myFunction({fn: 'Martin', ln: 'Harper', age: 26, email: 'martin.harper@test.de', weight: 102})
-    // Expected {fn: 'Martin', ln: 'Harper', weight: '102kg'}
-    console.log(myFunction({ fn: 'Andrew', ln: 'Harper', age: 81, size: 175, weight: 71 }))
-    // Expected {fn: 'Andrew', ln: 'Harper', size: '175cm', weight: '71kg'}
-    myFunction({fn: 'Matthew', ln: 'Müller', age: 19, email: 'matthew@mueller.de'})    
-    // Expected {fn: 'Matthew', ln: 'Müller'}
+
+const obj2 = {
+
+a: 2 
+
+}
+
+const obj3 = Object.create(obj1)
+
+function Foo(a, b) {
+    
+    return a.isPrototypeOf(b)
+
+}
+
+console.log(Foo(obj1, obj2)) // false;
+
+console.log(Foo(obj3, obj1)) // false;
+
+console.log(Foo(obj1, obj3)) // true;
