@@ -5,18 +5,16 @@ class Animal {
         this._age = age;
         this._type = type;
         this._speed = speed;
-    }
-    get() {
-        return this.bio();
-    }
+  }
+  
     bio() {
-        alert(`${this._name} наледить до типу ${this._type}, вид хижих ссавців з роду пантер родини котових ! Це другий за величиною вид родини після тигра. `);
+        `${this._name} наледить до типу ${this._type}, вид хижих ссавців з роду пантер родини котових ! Це другий за величиною вид родини після тигра. `;
     };
     run() {
-        alert(`${this._name} може бігти з максимальною швидкістю ${this._speed} км ! `);
+        `${this._name} може бігти з максимальною швидкістю ${this._speed} км ! `;
     };
     maxWeight() {
-        alert(`${this._name} максимальна вага складає ${this._weight} кг `)
+        `${this._name} максимальна вага складає ${this._weight} кг `
     };
 
 
